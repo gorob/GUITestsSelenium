@@ -14,9 +14,9 @@
 
     <distributionManagement>
         <repository>
-            <id>bintray</id>
-            <name>guitests-selenium-framework</name>
-            <url>https://api.bintray.com/maven/gorob/guitests-selenium/${project.artifactId}/;publish=1</url>
+            <id>bintray-gorob-GUITestsSelenium</id>
+            <name>gorob-GUITestsSelenium</name>
+            <url>https://api.bintray.com/maven/gorob/GUITestsSelenium/GUITestsSelenium/;publish=1</url>
         </repository>
     </distributionManagement>
 
