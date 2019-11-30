@@ -12,6 +12,21 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>bintray</id>
+            <name>guitests-selenium-framework</name>
+            <url>https://api.bintray.com/maven/gorob/guitests-selenium/${project.artifactId}/;publish=1</url>
+        </repository>
+    </distributionManagement>
+
+    <scm>
+        <connection>scm:git:git@github.com:gorob/GUITestsSelenium.git</connection>
+        <developerConnection>scm:git:git@github.com:gorob/GUITestsSelenium.git</developerConnection>
+        <url>https://github.com/gorob/GUITestsSelenium</url>
+        <tag>HEAD</tag>
+    </scm>
+
     <modules>
         <module>guitests-selenium-framework</module>
     </modules>
