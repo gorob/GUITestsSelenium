@@ -49,7 +49,7 @@ public class DriverFactory {
         return new FirefoxDriver();
     }
 
-    private static String getBrowserName(){
+    protected static String getBrowserName(){
         return getEnvOrPropertyValue(BROWSER_KEY, BROWSER_VALUE_FIREFOX);
     }
 
@@ -57,7 +57,7 @@ public class DriverFactory {
         return Boolean.getBoolean(getEnvOrPropertyValue(BROWSER_LOGGING_KEY, BROWSER_LOGGING_VALUE_OFF));
     }
 
-    private static String getEnvOrPropertyValue(String key, String defaultValue){
+    protected static String getEnvOrPropertyValue(String key, String defaultValue){
         String value = System.getenv(key);
         if (value==null) {
             value = System.getProperty(key);
