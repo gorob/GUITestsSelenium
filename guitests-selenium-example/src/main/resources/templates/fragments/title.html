@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <body>
+        <div class="table-responsive-xl col-sm-auto" th:fragment="titleBlock (title, backlink)">
+            <table id="tblTitle" class="table table-sm">
+                <tbody>
+                <tr>
+                        <td th:if="${backlink != null}" >
+                            <!--/*@thymesVar id="backlink" type="String"*/-->
+                            <a class="btn btn-light" th:href="${backlink}">
+                                <i class="fas fa-backward"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <!--/*@thymesVar id="title" type="String"*/-->
+                            <h2 class="text-left" th:utext="${title}">Titel</h2>
+                        </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </body>
+</html>

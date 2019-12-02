@@ -1,0 +1,11 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en"
+      th:replace="fragments/books/book_edit.html :: editBlock (
+          pageTitle='Edit book',
+          bookToEdit=${bookToEdit},
+          genres=${genres},
+          rootPath='/books',
+          subPath='/edit',
+          buttonTextOk='Save'
+      )">
+</html>

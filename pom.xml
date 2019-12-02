@@ -29,5 +29,6 @@
 
     <modules>
         <module>guitests-selenium-framework</module>
+        <module>guitests-selenium-example</module>
     </modules>
 </project>

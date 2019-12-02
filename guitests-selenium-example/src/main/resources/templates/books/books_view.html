@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" th:with="pageTitle='Overview books'">
+    <head th:replace="~{fragments/header.html :: commonHeader (title=${pageTitle})}"></head>
+
+    <body>
+        <header th:replace="~{fragments/navbar.html :: commonNavbar}"></header>
+
+        <div th:replace="~{fragments/title.html :: titleBlock (title=${pageTitle}, backlink=null)}"></div>
+
+        <div class="table-responsive-xl col-sm-auto">
+            <table class="table table-sm table-hover" id="booksTableId">
+                <thead class="thead-light">
+                    <tr>
+                        <th>
+                            <a class="btn btn-light" th:href="@{/books/add}">
+                                <i class="fas fa-plus-circle"></i>
+                            </a>
+                        </th>
+                        <th th:text="#{books.headers.title}">Title</th>
+                        <th th:text="#{books.headers.genre}">Genre</th>
+                        <th th:text="#{books.headers.authors}">Authors</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="bookEach,rowStat : ${books}">
+                        <td>
+                            <form th:method="POST" th:action="@{'/books/delete/{id}'(id=${bookEach.id})}">
+                                <button type="submit" class="btn btn-light">
+                                    <i class="fas fa-minus-circle"></i>
+                                </button>
+                            </form>
+                        </td>
+                        <td><a class="tablerow-link" th:text="${bookEach.title}" th:href="@{'/books/edit/{id}'(id=${bookEach.id})}">Title</a></td>
+                        <td><a class="tablerow-link" th:text="${bookEach.genre}" th:href="@{'/books/edit/{id}'(id=${bookEach.id})}">Genre</a></td>
+                        <td><a class="tablerow-link" th:text="${bookEach.authorsAsCommaseparatedList}" th:href="@{'/books/edit/{id}'(id=${bookEach.id})}">Author1, Author2</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,3 +1,4 @@
 /.idea/
-/GUITestFrameworkSelenium/target/
-/GUITestFrameworkSelenium/guitests-selenium-framework.iml
+/guitests-selenium-framework/guitests-selenium-framework.iml
+/guitests-selenium-example/guitests-selenium-example.iml
+/guitests-selenium-framework/target/
