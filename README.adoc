@@ -1,0 +1,5 @@
+= GUITestsSelenium
+
+image:https://circleci.com/gh/gorob/GUITestsSelenium/tree/master.svg?style=shield["CircleCI", link="https://circleci.com/gh/gorob/GUITestsSelenium/tree/master"]
+image:https://img.shields.io/badge/License-MIT-yellow.svg["MIT License", link="https://opensource.org/licenses/MIT"]
+image:https://api.bintray.com/packages/gorob/GUITestsSelenium/GUITestsSelenium/images/download.svg[link="https://bintray.com/gorob/GUITestsSelenium/GUITestsSelenium/_latestVersion"]
